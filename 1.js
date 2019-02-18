@@ -24,7 +24,7 @@ console.log(buf);
 
 Promise.prototype.finally = function (callback) {
     let P = this.then();
-    return this.then(
+    return P(
       value  => P(callback()).then(() => value),
       reason => P(callback()).then(() => { throw reason })
     );
