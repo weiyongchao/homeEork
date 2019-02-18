@@ -1,7 +1,6 @@
 // buffer.concat
 let b1 = Buffer.from('珠');
 let b2 = Buffer.from('峰');
-let big = Buffer.alloc(6);
 // source.copy(target,targetStart,sourceStart,sourceEnd)
 Buffer.concat = function(list,totalLength){ // copy
   if(typeof totalLength=='undefined'){
